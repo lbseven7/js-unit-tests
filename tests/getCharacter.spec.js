@@ -48,34 +48,34 @@ describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
     expect(getCharacter()).toBeUndefined();
     // Teste se a função retorna o objeto correto para o parâmetro 'Arya',
     const arya = {
-      name: "Arya Stark",
-      class: "Rogue",
-      phrases: ["Not today", "A girl has no name.'],
+      name: 'Arya Stark',
+      class: 'Rogue',
+      phrases: ['Not today', 'A girl has no name.'],
     };
-    expect(getCharacter("Arya")).toEqual(arya);
+    expect(getCharacter('Arya')).toEqual(arya);
     // Teste se a função retorna o objeto correto para o parâmetro 'Brienne',
     const brienne = {
-      name: "Brienne Tarth",
-      class: "Knight",
+      name: 'Brienne Tarth',
+      class: 'Knight',
       phrases: [
-        "Im No Lady, Your Grace.",
-        "I, Brienne Of Tarth, Sentence You To Die.",
+        'Im No Lady, Your Grace.',
+        'I, Brienne Of Tarth, Sentence You To Die.',
       ],
     };
-    expect(getCharacter("Brienne")).toEqual(brienne);
+    expect(getCharacter('Brienne')).toEqual(brienne);
     // Teste se a função retorna o objeto correto para o parâmetro 'Melissandre',
     const melissandre = {
-      name: "Melissandre",
-      class: "Necromancer",
+      name: 'Melissandre',
+      class: 'Necromancer',
       phrases: [
-        "Death By Fire Is The Purest Death.",
-        "For The Night Is Dark And Full Of Terrors.",
+        'Death By Fire Is The Purest Death.',
+        'For The Night Is Dark And Full Of Terrors.',
       ],
     };
-    expect(getCharacter("Melissandre")).toEqual(melissandre);
+    expect(getCharacter('Melissandre')).toEqual(melissandre);
     // Teste se os parâmetros não são Case Sensitive.
-    expect(getCharacter("ARYA", " ArYa", "Arya"));
+    expect(getCharacter('ARYA', 'ArYa', 'Arya'));
     // Teste se ao passar um nome que não está na tabela, a função retorna undefined.
-    expect(getCharacter("Ary Stark")).toBeUndefined();
+    expect(getCharacter('Ary Stark')).toBeUndefined();
   });
 });
